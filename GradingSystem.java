@@ -18,7 +18,6 @@ public class GradingSystem {
         boolean failedAssessment = assessmentScore < 15;
         boolean studentRepeated = examScore < 25 && assessmentScore < 15;
 
-        scanner.close();
 
         if (passedBoth || studentCondoned) {
             if (studentPaid) {
@@ -37,5 +36,7 @@ public class GradingSystem {
         if (studentRepeated) {
             System.out.println("You are repeated");
         }
+
+        scanner.close();
     }
 }
